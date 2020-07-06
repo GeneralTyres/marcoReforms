@@ -1,0 +1,47 @@
+﻿recruit = {
+
+	on_other_nation = yes
+	on_own_nation = no
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_diplomacy"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_alive = yes
+			NOT = { employer = scope:actor }
+			NOT = { employer = { tag = REB } }
+			NOT = { employer = { tag = BAR } }
+			is_mercenary = no
+		}
+	}
+	
+	
+	allowed_trigger = {
+		hidden:scope:actor = { 
+			can_pay_price = recruit_character
+		}
+		hidden:scope:target = {
+			is_ruler = no
+			is_banished = no
+			is_governor = no
+			is_general = no
+			is_admiral = no
+			is_primary_heir = no
+			NOT = { loyalty > 70 }
+			is_friend = scope:actor.current_ruler
+		}
+	}
+	
+
+	
+	effect = {
+		scope:actor = {
+			pay_price = recruit_character
+		}
+	
+		scope:target = {
+			move_country = scope:actor
+		}
+	}
+	
+}	

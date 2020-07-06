@@ -1,0 +1,136 @@
+﻿pick_influence_ambition = {
+
+	on_other_nation = no
+	on_own_nation = yes
+	
+	sound = "event:/SFX/UI/Character/Generic/sfx_ui_character_scholar"
+	
+	potential_trigger = {
+		hidden:scope:target = {
+			is_alive = yes
+			is_ruler = yes
+			is_mercenary = no
+			NOT = { employer = { tag = REB } }
+			NOT = { employer = { tag = BAR } }
+		}
+		
+	}
+	
+	allowed_trigger = {
+		scope:actor = {
+			custom_tooltip = {
+				text = "any_character_better_than_this_tt"
+				any_character = {
+					NOT = {
+						this = scope:target
+					}
+					is_adult = yes
+					prominence >= 50
+					OR = {
+						martial >= scope:target.martial
+						finesse >= scope:target.finesse
+						charisma >= scope:target.charisma
+						zeal >= scope:target.zeal
+					}
+					loyalty >= 50
+					NOT = {
+						is_rival = scope:target 
+					}
+				}
+			}
+		}
+		scope:target = {
+			popularity >= 30
+			trigger_if = {
+				limit = {
+					has_ambition = scheme_influence
+				}
+				custom_tooltip = {
+					text = "scheme_influence_has_tt"
+					NOT = {
+						has_ambition = scheme_influence
+					}
+				}
+			}
+		}
+	}
+	
+	character_actor_trigger = {
+		is_adult = yes
+		NOT = {
+			this = scope:target
+		}
+		OR = {
+			martial >= scope:target.martial
+			finesse >= scope:target.finesse
+			charisma >= scope:target.charisma
+			zeal >= scope:target.zeal
+		}
+		loyalty >= 50
+		NOT = {
+			is_rival = scope:target
+		}
+	}
+	
+	effect = {
+		scope:target = {
+			clear_ambition_effect_ci = yes
+			add_popularity = -30
+			set_variable = {
+				name = ongoing_scheme_target
+				value = scope:recipient
+				days = 400
+			}
+			set_ambition = scheme_influence
+		}
+		custom_tooltip = "influence_potential_rewards_tt"
+	}
+	
+}	
+
+#auto_influence_toggle = {
+#
+#	on_other_nation = no
+#	on_own_nation = yes
+#	
+#	sound = "event:/SFX/UI/Character/Unique/sfx_ui_character_appoint_dictator"
+#	
+#	potential_trigger = {
+#		hidden:scope:target = {
+#			is_alive = yes
+#			is_ruler = yes
+#			is_mercenary = no
+#			NOT = { employer = { tag = REB } }
+#			NOT = { employer = { tag = BAR } }
+#		}
+#		
+#	}
+#	
+#	allowed_trigger = {
+#
+#	}
+#	
+#	effect = {
+#		scope:target = {
+#			clear_ambition_effect_ci = yes
+#		}
+#		scope:actor = {
+#			if = {
+#				limit = {
+#					NOT = {
+#						has_variable = auto_influence
+#					}
+#				}
+#				set_variable = {
+#					name = auto_influence
+#				}
+#				custom_tooltip = "auto_influence_effect_tt"
+#			}
+#			else = {
+#				remove_variable = auto_influence
+#				custom_tooltip = "auto_influence_effect_tt_stop"
+#			}
+#		}
+#	}
+#	
+#}	
