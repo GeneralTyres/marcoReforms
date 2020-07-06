@@ -4,7 +4,7 @@
 military_building = { #Training Camp
 	local_manpower_modifier = 0.1
 
-	cost = 49
+	cost = 50
 	time = 180
 	
 	potential = {
