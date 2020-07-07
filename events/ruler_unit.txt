@@ -1,0 +1,82 @@
+namespace = ruler_unit
+# Ruler builds a building
+ruler_unit.1 = {
+    type = province_event # EVENT TYPE - Can be Country/Province/Character, decides ROOT Scope
+    title = ruler_unit.1.t # LOCALIZATION KEY - Title of Event
+    desc = ruler_unit.1.desc # LOCALIZATION KEY - Description of Event
+    picture = aqueducts # EVENT PICTURE
+    hidden = no # SPECIAL FIELD - Can hide the event from a player's view
+    goto_location = ROOT # SPECIAL FIELD - Will let the player jump to the province in question
+
+    # weight_multiplier = { # MODIFIER - Will modify the chances for the event to fire
+
+    # }
+
+    trigger = { # TRIGGER FIELD - Checks if the event will fire at all
+ 
+    }
+
+	immediate = { # EFFECT FIELD - Fires after trigger check, but before everything else
+		# save_scope_as = plague_city_scope # EFFECT - Save Scope for later
+    }
+
+    option = { # EFFECT FIELD - FIRST OPTION - Options the player can choose between when receiving the event
+      name = ruler_unit.1.a
+      add_building_level = temple_building
+
+      # Pay for construction
+      root.owner.current_ruler = {
+        add_gold = -300
+        add_popularity = 10
+      }
+    }
+    option = { # EFFECT FIELD - SECOND OPTION
+      name = ruler_unit.1.b
+      add_building_level = theathre_building
+      # Pay for construction
+      root.owner.current_ruler = {
+        add_gold = -300
+        add_popularity = 10
+      }
+    }
+    option = { # EFFECT FIELD - THIRD OPTION
+      name = ruler_unit.1.c
+      add_building_level = aqueduct_building
+      # Pay for construction
+      root.owner.current_ruler = {
+        add_gold = -300
+        add_popularity = 10
+      }
+    }
+    option = { # EFFECT FIELD - THIRD OPTION
+      name = ruler_unit.1.d
+      add_building_level = forum_building
+      # Pay for construction
+      root.owner.current_ruler = {
+        add_gold = -300
+        add_popularity = 10
+      }
+    }
+    option = { # EFFECT FIELD - FOURTH OPTION - Options the player can choose between when receiving the event
+        name = ruler_unit.1.e
+        trigger = { # TRIGGER FIELD - Checks if this specific option will be shown
+        root.owner.current_ruler.zeal > 7
+      }
+        add_building_level = temple_building
+        # Pay for construction
+        root.owner.current_ruler = {
+          add_gold = -300
+          add_popularity = 10
+        }
+        # exclusive = yes # SPECIAL FIELD - Will be the only option available, if it is available
+        highlight = yes # SPECIAL FIELD - Will highlight the option
+    }
+
+    option = { # EFFECT FIELD - FIFTH OPTION - CANCEL
+      name = ruler_unit.1.f
+    }
+
+    after = { # EFFECT FIELD - Happens after the player has clicked an option
+
+    }
+}

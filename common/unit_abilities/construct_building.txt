@@ -1,0 +1,64 @@
+construct_building = {
+
+	duration = 0
+	enable = yes
+	toggle = no
+	soundeffect ="event:/SFX/Animations/Units/Generic/sfx_anim_unit_build_colony"
+
+	army_only = yes
+	
+	# Only rulers can do it
+	hidden = {
+		commander = { 
+			NOT = { 
+				is_ruler = yes
+			} 
+		}
+	}
+	
+	allow = {
+		has_commander = yes
+		commander = {
+			is_ruler = yes
+		}
+		# Can pay for building
+		commander = { wealth >= 300 }
+
+		is_army = yes
+		in_combat = no
+		is_moving = no
+		in_siege = no
+		is_exiled = no
+		unit_location = {
+			has_city_status = yes
+			has_owner = yes
+			owner = root.unit_owner
+			free_building_slots >= 1
+		}
+		exists = unit_location.state
+	}
+	
+	
+	start_effect = {
+		# unit_owner = {  pay_price = price_anabasis }
+		hidden_effect = {
+			unit_location = {
+				trigger_event = {
+					id = ruler_unit.1 # Build event
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = unit_location.state
+			}
+		}
+	
+	}
+	
+	ai_will_do = {
+	
+	}
+	
+	idle_entity_state = recruiting
+}

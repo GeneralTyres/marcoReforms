@@ -1,0 +1,6 @@
+l_english:
+ #
+ ruler_unit.1.t:0 "The Ruler constructs a building"
+ ruler_unit.1.desc:0 "Build a building."
+ ruler_unit.1.a:0 "Build Temple"
+ ruler_unit.1.b:0 "Build Theater"

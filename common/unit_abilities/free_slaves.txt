@@ -1,0 +1,90 @@
+﻿free_slaves = {
+
+	duration = 0
+	enable = yes
+	toggle = no
+	soundeffect ="event:/SFX/Animations/Units/Generic/sfx_anim_unit_build_colony"
+
+	army_only = yes
+	
+	# Only rulers can do it
+	hidden = {
+		commander = { 
+			NOT = { 
+				is_ruler = yes
+			} 
+		}
+	}
+	
+	allow = {
+		has_commander = yes
+		commander = {
+			is_ruler = yes
+		}
+		# Can pay for freeing of slaves
+		commander = { wealth >= 100 }
+
+		is_army = yes
+		in_combat = no
+		is_moving = no
+		in_siege = no
+		is_exiled = no
+		unit_location = {
+			has_owner = yes
+			owner = root.unit_owner
+			total_population >= 10
+			num_of_slaves >= 4
+			NOT = { has_province_modifier = dhe_slave_conditions_autonomy_pm }
+		}
+		exists = unit_location.state
+	}
+	
+	
+	start_effect = {
+		# unit_owner = {  pay_price = price_anabasis }
+		if = {
+			limit = {
+				exists = unit_location.state
+			}
+			unit_location = {
+				random_pops_in_province = {
+					limit = {
+						pop_type = slaves
+					}
+					set_pop_type = freemen
+				}
+				random_pops_in_province = {
+					limit = {
+						pop_type = slaves
+					}
+					set_pop_type = freemen
+				}
+			}
+			# Add commander popularity
+			commander = {
+				add_popularity = 10
+				add_gold = -100
+			}
+			# Add modifier
+			unit_location = {
+				if = {
+					limit = {
+						NOT = { has_province_modifier = dhe_slave_conditions_autonomy_pm}
+					}
+					add_province_modifier = {
+						name = dhe_slave_conditions_autonomy_pm
+						duration = 730
+					}
+					
+				}
+			}
+		}
+	
+	}
+	
+	ai_will_do = {
+	
+	}
+	
+	idle_entity_state = recruiting
+}
