@@ -30,11 +30,23 @@ military_building = { #Training Camp
 
 fortress_building = {
 	fort_level = 1
+	local_building_slot = 1
 	
 	cost = 50
 	time = 915
 	
-	
+	potential = {
+		OR = {
+			AND = {
+				num_of_fortress_building < 5
+				has_city_status = yes
+			}
+			AND = {
+				num_of_fortress_building < 1
+				has_city_status = no
+			}
+		}
+	}
 	
 	modification_display = {
 		0 = fort_level

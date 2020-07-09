@@ -9,10 +9,11 @@
 		local_monthly_food = 5
 	}
 	country = { #Applied to country
-		global_manpower_modifier = 0.1
+		global_population_growth = 0.01
+		# global_manpower_modifier = 0.1
 	}
 	export = { #Applied to country
-		global_manpower_modifier = 0.05
+		# global_manpower_modifier = 0.05
 	}
 	
 	color = hsv { 0.156 0.8 0.5 }	
@@ -32,7 +33,7 @@ salt = {
 	}
 	
 	export = {
-		army_maintenance_cost = -0.025
+		# army_maintenance_cost = -0.025
 	}
 	color = { 0.6 0.4 0.6 }
 
@@ -53,7 +54,7 @@ iron = {
 	}
 
 	export = {
-		heavy_infantry_discipline = 0.05
+		# heavy_infantry_discipline = 0.05
 	}
 
 	color = hsv { 0.0 0.0 0.11 }	
@@ -76,7 +77,7 @@ horses = {
 	}
 
 	export = {
-		light_cavalry_discipline = 0.05
+		# light_cavalry_discipline = 0.05
 	}
 
 	color = hsv { 0.05 0.9 0.5 }	
@@ -96,7 +97,7 @@ wine = {
 		army_maintenance_cost = -0.05
 	}
 	export = {
-		army_maintenance_cost = -0.025
+		# army_maintenance_cost = -0.025
 	}
 
 
@@ -122,7 +123,7 @@ wood = {
 		global_ship_recruit_speed = 0.50
 	}
 	export = {
-		global_ship_recruit_speed = 0.20
+		# global_ship_recruit_speed = 0.20
 	}
 
 	color = hsv { 0.3 0.9 0.1  }
@@ -141,7 +142,7 @@ amber = {
 		ruler_popularity_gain = 0.05
 	}
 	export = {
-		ruler_popularity_gain = 0.025
+		# ruler_popularity_gain = 0.025
 	}
 
 	color = { 0.9 0.63 0.2 }
@@ -160,7 +161,7 @@ stone = {
 		build_cost = -0.1
 	}
 	export = {
-		global_defensive = 0.1
+		# global_defensive = 0.1
 	}
 	
 	color = hsv { 0.6 0.2 0.3 }
@@ -179,7 +180,7 @@ fish = {
 		global_freemen_happyness = 0.05
 	}
 	export = {
-		global_freemen_happyness = 0.025
+		# global_freemen_happyness = 0.025
 	}
 	
 	color = hsv { 0.6 0.55 1 }
@@ -198,7 +199,7 @@ spices = {
 		global_citizen_output = 0.05
 	}
 	export = {
-		global_citizen_output = 0.025
+		# global_citizen_output = 0.025
 	}
 	
 	color = { 0.6 0.8 0.4 }
@@ -218,7 +219,7 @@ elephants = {
 		warelephant_discipline = 0.1
 	}
 	export = {
-		warelephant_discipline = 0.05
+		# warelephant_discipline = 0.05
 	}
 	
 	color = hsv { 0.6 0.2 0.4 }	
@@ -236,7 +237,7 @@ papyrus = {
 		civic_tech_investment = 0.05
 	}
 	export = {
-		research_points_modifier = 0.05
+		# research_points_modifier = 0.05
 	}
 	
 	color = { 0.9 0.8 0.65 }
@@ -255,7 +256,7 @@ cloth = {
 		oratory_tech_investment = 0.05
 	}
 	export = {
-		research_points_modifier = 0.05
+		# research_points_modifier = 0.05
 	}
 	
 	color = hsv { 1 0.9 0.5 }
@@ -274,7 +275,7 @@ wild_game = {
 		archers_discipline = 0.1
 	}
 	export = {
-		archers_discipline = 0.05
+		# archers_discipline = 0.05
 	}
 	color = hsv { 0.1 0.4 0.25  }
 	
@@ -294,7 +295,7 @@ precious_metals = {
 		global_pop_assimilation_speed_modifier = 0.10
 	}	
 	export = {
-		global_pop_assimilation_speed_modifier = 0.05
+		# global_pop_assimilation_speed_modifier = 0.05
 	}
 	
 	color = hsv { 0.085 0.95 1 }
@@ -314,7 +315,7 @@ steppe_horses = {
 		horse_archers_discipline = 0.1
 	}
 	export = {
-		horse_archers_discipline = 0.05
+		# horse_archers_discipline = 0.05
 	}
 	
 	color = hsv { 0.1 0.5 0.8 }	
@@ -333,7 +334,7 @@ cattle = {
 		global_pop_promotion_speed_modifier = 0.25
 	}
 	export = {
-		global_pop_promotion_speed_modifier = 0.10
+		# global_pop_promotion_speed_modifier = 0.10
 	}
 	
 	color = hsv { 0.0 0.7 0.35 }	
@@ -353,7 +354,7 @@ earthware = {
 		global_freemen_output = 0.025
 	}
 	export = {
-		global_freemen_output = 0.01
+		# global_freemen_output = 0.01
 	}
 
 	
@@ -375,7 +376,7 @@ dye = {
 	}
 	
 	export = {
-		global_citizen_happyness = 0.025
+		# global_citizen_happyness = 0.025
 	}
 
 	
@@ -398,7 +399,7 @@ fur = {
 	}
 	
 	export = {
-		experience_decay = -0.005
+		# experience_decay = -0.005
 	}
 	
 	
@@ -419,7 +420,7 @@ olive = {
 	}
 	
 	export = {
-		global_slaves_happyness = 0.025
+		# global_slaves_happyness = 0.025
 	}
 	
 	
@@ -441,7 +442,7 @@ leather = {
 	}
 	
 	export = {
-		light_infantry_defensive = 0.05
+		# light_infantry_defensive = 0.05
 	}
 
 	
@@ -463,7 +464,7 @@ base_metals = {
 	} 
 	
 	export = {
-		light_infantry_offensive = 0.05
+		# light_infantry_offensive = 0.05
 
 	}
 	
@@ -486,7 +487,7 @@ woad = {
 		global_tribesmen_happyness = 0.1
 	}
 	export = {
-		global_tribesmen_happyness = 0.05
+		# global_tribesmen_happyness = 0.05
 	}
 	
 	
@@ -508,7 +509,7 @@ marble = {
 		monthly_tyranny = -0.015
 	}
 	export = {
-		monthly_tyranny = -0.01
+		# monthly_tyranny = -0.01
 	}
 	
 	
@@ -530,7 +531,7 @@ honey = {
 		diplomatic_reputation = 2
 	}
 	export = {
-		diplomatic_reputation = 1
+		# diplomatic_reputation = 1
 	}
 	
 	
@@ -551,7 +552,7 @@ incense = {
 		happiness_for_same_religion_modifier = 0.025
 	}
 	export = {
-		omen_power = 0.05
+		# omen_power = 0.05
 	}
 
 	
@@ -572,7 +573,7 @@ hemp = {
 		naval_damage_done = 0.1
 	}
 	export = {
-		naval_damage_taken = -0.1
+		# naval_damage_taken = -0.1
 	}
 
 	
@@ -593,7 +594,7 @@ vegetables = {
 		slaves_move_cost_modifier = -0.2
 	}
 	export = {
-		slaves_move_cost_modifier = -0.1
+		# slaves_move_cost_modifier = -0.1
 	}
 	
 	
@@ -613,7 +614,7 @@ gems = {
 		country_civilization_value = 5
 	}
 	export = {
-		country_civilization_value = 2.5
+		# country_civilization_value = 2.5
 	}
 
 	
@@ -633,7 +634,7 @@ camel = {
 		camels_discipline = 0.1
 	}
 	export = {
-		camels_discipline = 0.05
+		# camels_discipline = 0.05
 	}
 	
 	
@@ -652,7 +653,7 @@ glass = {
 		religious_tech_investment = 0.05
 	}
 	export = {
-		research_points_modifier = 0.05
+		# research_points_modifier = 0.05
 	}
 	
 	
@@ -671,7 +672,7 @@ silk = {
 		integrate_speed = 0.1
 	}
 	export = {
-		integrate_speed = 0.05
+		# integrate_speed = 0.05
 	}
 	
 	
@@ -691,7 +692,7 @@ dates = {
 		global_commerce_modifier = 0.05
 	}
 	export = {
-		global_commerce_modifier = 0.025
+		# global_commerce_modifier = 0.025
 	}
 	
 	

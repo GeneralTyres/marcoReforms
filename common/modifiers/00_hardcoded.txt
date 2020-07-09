@@ -256,7 +256,6 @@ pirate_plunder = {
 	local_commerce_value_modifier = -0.15
 	local_tax_modifier = -0.25
 	local_pop_demotion_speed_modifier = 0.10
-	local_state_trade_routes = -1
 }
 
 
@@ -675,7 +674,7 @@ base_values = {
 	
 	global_manpower = 0.25
 	global_tax_income = 2.5
-	stability_monthly_decay = 0.01
+	# stability_monthly_decay = 0.01
 	
 	civil_war_threshold = 0.25
 	rebellion_threshold = 0.20
@@ -763,7 +762,8 @@ civil_war = {
 
 peace = {
 	max_war_exhaustion = 20			#base max at peace.
-	global_monthly_civilization = 0.01
+	# global_monthly_civilization = 0.01
+	stability_monthly_change = 0.20
 	global_population_growth = 0.04	
 }
 

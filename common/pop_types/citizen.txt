@@ -5,6 +5,7 @@
 	}
 	
 	count_modifier = {
+		local_state_trade_routes = 0.015
 		pop_food_consumption = -0.3
 	}
 	
