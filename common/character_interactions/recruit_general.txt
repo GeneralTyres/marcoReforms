@@ -9,6 +9,7 @@
 		hidden:scope:target = {
 			is_alive = yes
 			NOT = { employer = { tag = REB } }
+			NOT = { employer = scope:actor }
 			NOT = { employer = { tag = BAR } }
 			is_mercenary = no
 			is_general = yes

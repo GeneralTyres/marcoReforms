@@ -3,4 +3,5 @@
 	skill = charisma
 
 	country_civilization_value = 2
+	diplomatic_range_modifier = 0.05
 }

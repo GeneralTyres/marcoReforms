@@ -2551,7 +2551,7 @@ scheme_invest_in_agriculture_start = {
 		}
 		set_variable = {
 			name = expanded_latifundia
-			days = 1825
+			days = 90
 		}
 		random_holdings = {
 			limit = {
@@ -2596,7 +2596,7 @@ scheme_invest_in_mining_start = {
 		}
 		set_variable = {
 			name = expanded_mines
-			days = 1825
+			days = 910
 		}
 		random_holdings = {
 			limit = {
@@ -2621,6 +2621,52 @@ scheme_invest_in_mining_finish = {
 		hidden_effect = {
 			scope:mining_holding = {
 				add_building_level = slave_mine_building
+			}
+			remove_scheme_variables_effect = yes
+		}
+	}
+}
+
+scheme_invest_in_slavery_start = {
+	effect = {
+		save_scope_as = ongoing_scheme_target
+		set_variable = {
+			name = ongoing_scheme_target
+			value = scope:ongoing_scheme_target
+			days = 400
+		}
+		add_character_modifier = {
+			name = "encroaching_on_public_land_modifier"
+			duration = 365
+		}
+		set_variable = {
+			name = expanded_mines
+			days = 910
+		}
+		random_holdings = {
+			limit = {
+				has_food_trade_good_trigger = no
+				has_minable_trade_good_trigger = no
+				has_city_status = no
+				has_construction = no
+				NOT = {
+					has_province_modifier = founding_city_in_progress
+				}
+				NOT = {
+					has_province_modifier = urban_development_in_progress
+				}
+			}
+			save_scope_as = mining_holding
+		}
+	}
+}
+
+scheme_invest_in_slavery_finish = {
+	effect = {
+		custom_tooltip = invest_in_mining_effect_tt
+		hidden_effect = {
+			scope:mining_holding = {
+				add_building_level = latifundia_building
 			}
 			remove_scheme_variables_effect = yes
 		}

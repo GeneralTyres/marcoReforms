@@ -1191,7 +1191,7 @@ deity_apollo_didymaios = {
 	}
 	icon = deity_greek_eloquence
 	passive_modifier = { happiness_for_same_culture_modifier = deity_happiness_for_same_culture_modifier_svalue }
-	omen = { global_citizen_output = omen_global_citizen_output_svalue } #Bonus from Omen
+	omen = { global_citizen_happyness = omen_global_citizen_output_svalue } #Bonus from Omen
 	religion = roman_pantheon
 	deity_category = economy #This Deity uses an Economy Slot
 	

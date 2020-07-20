@@ -53,6 +53,7 @@
 		greek_seleucid_path_2 = {
 			recruit_mercenary_cost_modifier = -0.15
 			land_morale_modifier = 0.05
+			siege_ability = 0.1
 			ai_will_do = {
 				modifier = {
 					trigger = {
@@ -77,6 +78,7 @@
 		}
 		greek_seleucid_path_3 = {
 			naval_damage_done = 0.05
+			siege_engineers = 3
 			ai_will_do = {
 				modifier = {
 					trigger = {
@@ -257,6 +259,7 @@
 		}
 		greek_states_path_4 = {
 			enable_ability = military_colonies
+			siege_engineers = 3
 			ai_will_do = {
 				modifier = {
 					trigger = {
@@ -312,6 +315,7 @@
 				}
 			}
 			light_cavalry_offensive = 0.1
+			siege_ability = 0.1
 		}
 		greek_states_path_6 = {
 			ai_will_do = {
@@ -509,6 +513,7 @@
 			}
 			enable_ability = naval_raiding #note: abilities can no longer be enabled here. They are enabled in the allow section of the ability
 			enslavement_efficiency = 0.1
+			siege_engineers = 3
 		}
 		greek_states_path_3 = {
 			ai_will_do = {
@@ -540,7 +545,8 @@
 					}
 				}
 			}
-			siege_ability = 0.1
+			# siege_ability = 0.1
+			siege_ability = 0.15
 		}
 		greek_antigonid_path_6 = {
 			ai_will_do = {

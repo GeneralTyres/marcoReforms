@@ -7,6 +7,7 @@ scheme_assassinate = {
 			has_variable = ongoing_scheme_target
 			has_variable = recently_attempted_assassination
 		}
+		loyalty < 40
 		any_rival = {
 			employer = root.employer
 			OR = {
@@ -359,6 +360,10 @@ scheme_hold_games = {
 			add = 2
 			prominence >= 80
 		}
+		modifier = {
+			add = 2
+			popularity <= 30
+		}
 	}
 	
 	#on_monthly = xyz
@@ -643,6 +648,7 @@ scheme_steal_holding = {
 			has_variable = ongoing_scheme_target
 			has_variable = recent_holding_theft
 		}
+		num_holdings_owned < 5
 		employer = {
 			any_character = {
 				NOT = {
@@ -954,7 +960,7 @@ scheme_buy_holding = {
 		modifier = {
 			factor = 10
 			employer = {
-				num_of_provinces > 100
+				num_of_provinces > 75
 			}
 		}
 	}
@@ -980,6 +986,7 @@ scheme_gamble = {
 			title_importance_svalue > 1.25
 			power_base >= 1
 		}
+		has_any_position = no
 	}
 	
 	finished_when = {
@@ -1005,6 +1012,7 @@ scheme_gamble = {
 		OR = {
 			prisoner = yes
 			is_alive = no
+			has_any_position = yes
 			has_character_modifier = indisposed_charmod
 		}
 	}
@@ -1050,6 +1058,7 @@ scheme_pitfighting = {
 			has_trait = rash
 			martial >= 14
 		}
+		has_any_position = no
 	}
 	
 	finished_when = {
@@ -1075,6 +1084,7 @@ scheme_pitfighting = {
 		OR = {
 			prisoner = yes
 			is_alive = no
+			has_any_position = yes
 			is_ruler = yes
 			has_character_modifier = indisposed_charmod
 		}
@@ -1938,13 +1948,14 @@ scheme_invest_in_agriculture = {
 		NOR = {
 			has_variable = expanded_latifundia
 		}
-		is_head_of_family = yes
+		# is_head_of_family = yes
 		wealth >= 150
 		num_holdings_owned > 0
 		any_holdings = {
 			has_food_trade_good_trigger = yes
 			has_city_status = no
 			has_construction = no
+			free_building_slots >= 1
 			NOT = { has_building = basic_settlement_infratructure_building }
 			NOT = {
 				has_province_modifier = founding_city_in_progress
@@ -1952,11 +1963,12 @@ scheme_invest_in_agriculture = {
 			NOT = {
 				has_province_modifier = urban_development_in_progress
 			}
+			
 		}
-		OR = {
-			title_importance_svalue > 1.25
-			power_base >= 1
-		}
+		# OR = {
+		# 	title_importance_svalue > 1.25
+		# 	power_base >= 1
+		# }
 	}
 	
 	finished_when = {
@@ -1972,7 +1984,7 @@ scheme_invest_in_agriculture = {
 	
 	abort = {
 		OR = {
-			is_head_of_family = no
+			# is_head_of_family = no
 			is_ruler = yes
 			is_alive = no
 			prisoner = yes
@@ -1981,6 +1993,7 @@ scheme_invest_in_agriculture = {
 				OR = {
 					has_city_status = yes
 					has_construction = yes
+					free_building_slots = 0
 					has_building = basic_settlement_infratructure_building
 					has_province_modifier = founding_city_in_progress
 					has_province_modifier = urban_development_in_progress
@@ -1992,15 +2005,15 @@ scheme_invest_in_agriculture = {
 	chance = {
 		base = 3
 		modifier = {
-			add = 2
+			factor = 5
 			wealth >= 500
 		}
 		modifier = {
-			add = 5
+			add = 10
 			wealth >= 1000
 		}
 		modifier = {
-			add = 5
+			add = 7
 			has_trait = ambitious
 		}
 		modifier = {
@@ -2008,7 +2021,7 @@ scheme_invest_in_agriculture = {
 			has_trait = crafty
 		}
 		modifier = {
-			add = 5
+			add = 10
 			has_trait = founder
 		}
 	}
@@ -2033,13 +2046,14 @@ scheme_invest_in_mining = {
 		NOR = {
 			has_variable = expanded_mines
 		}
-		is_head_of_family = yes
+		# is_head_of_family = yes
 		wealth >= 150
 		num_holdings_owned > 0
 		any_holdings = {
 			has_minable_trade_good_trigger = yes
 			has_city_status = no
 			has_construction = no
+			free_building_slots >= 1
 			NOT = { has_building = slave_mine_building }
 			NOT = {
 				has_province_modifier = founding_city_in_progress
@@ -2048,10 +2062,10 @@ scheme_invest_in_mining = {
 				has_province_modifier = urban_development_in_progress
 			}
 		}
-		OR = {
-			title_importance_svalue > 1.25
-			power_base >= 1
-		}
+		# OR = {
+		# 	title_importance_svalue > 1.25
+		# 	power_base >= 1
+		# }
 	}
 	
 	finished_when = {
@@ -2067,7 +2081,7 @@ scheme_invest_in_mining = {
 	
 	abort = {
 		OR = {
-			is_head_of_family = no
+			# is_head_of_family = no
 			is_ruler = yes
 			is_alive = no
 			prisoner = yes
@@ -2087,15 +2101,15 @@ scheme_invest_in_mining = {
 	chance = {
 		base = 3
 		modifier = {
-			add = 2
+			factor = 5
 			wealth >= 500
 		}
 		modifier = {
-			add = 5
+			add = 10
 			wealth >= 1000
 		}
 		modifier = {
-			add = 5
+			add = 7
 			has_trait = ambitious
 		}
 		modifier = {
@@ -2103,7 +2117,7 @@ scheme_invest_in_mining = {
 			has_trait = crafty
 		}
 		modifier = {
-			add = 5
+			add = 10
 			has_trait = founder
 		}
 	}
@@ -2111,6 +2125,104 @@ scheme_invest_in_mining = {
 	#on_monthly = xyz
 	on_start = scheme_invest_in_mining_start
 	on_finish = scheme_invest_in_mining_finish
+	on_abort = scheme_abort
+
+	modifier = {
+		monthly_character_wealth = -10
+		#monthly_corruption = 0.5 #Separate Modifier for better tooltip
+	}
+}
+
+scheme_invest_in_slavery = {
+	can_be_picked = {
+		scheme_preconditions = yes
+		NOR = {
+			has_variable = ongoing_scheme_target
+		}
+		NOR = {
+			has_variable = expanded_mines
+		}
+		# is_head_of_family = yes
+		wealth >= 150
+		num_holdings_owned > 0
+		any_holdings = {
+			has_food_trade_good_trigger = no
+			has_minable_trade_good_trigger = no
+			has_city_status = no
+			has_construction = no
+			free_building_slots >= 1
+			NOT = { has_building = slave_mine_building }
+			NOT = {
+				has_province_modifier = founding_city_in_progress
+			}
+			NOT = {
+				has_province_modifier = urban_development_in_progress
+			}
+		}
+		# OR = {
+		# 	title_importance_svalue > 1.25s
+		# 	power_base >= 1
+		# }
+	}
+	
+	finished_when = {
+		custom_tooltip = {
+			text = "scheme_ambition_invest_in_mining"
+			always = no
+		}
+	}
+	
+	duration = 365
+	
+	skip_initial_abort = yes
+	
+	abort = {
+		OR = {
+			# is_head_of_family = no
+			is_ruler = yes
+			is_alive = no
+			prisoner = yes
+			has_character_modifier = indisposed_charmod
+			scope:mining_holding = {
+				OR = {
+					has_city_status = yes
+					has_construction = yes
+					free_building_slots = 0
+					has_building = slave_mine_building
+					has_province_modifier = founding_city_in_progress
+					has_province_modifier = urban_development_in_progress
+				}
+			}
+		}
+	}
+	
+	chance = {
+		base = 3
+		modifier = {
+			factor = 5
+			wealth >= 500
+		}
+		modifier = {
+			add = 10
+			wealth >= 1000
+		}
+		modifier = {
+			add = 7
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 5
+			has_trait = crafty
+		}
+		modifier = {
+			add = 10
+			has_trait = founder
+		}
+	}
+	
+	#on_monthly = xyz
+	on_start = scheme_invest_in_slavery_start
+	on_finish = scheme_invest_in_slavery_finish
 	on_abort = scheme_abort
 
 	modifier = {

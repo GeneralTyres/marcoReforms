@@ -108,7 +108,7 @@ tribe_new_ruler = {
 }
 
 same_party_re_elected = {
-	tyranny = 2
+	# tyranny = 2
 }
 
 new_ruling_party = {
@@ -140,9 +140,9 @@ war_when_military_acces = {
 }
 
 war_no_cb = {
-	stability = 25
-	aggressive_expansion = 5
-	war_exhaustion = 2
+	stability = 10
+	aggressive_expansion = 10
+	# war_exhaustion = 2
 }
 
 war_on_subject = {

@@ -15,6 +15,7 @@
 				NOR = {
 					has_trait = orator
 					has_trait = silver_tongued
+					charisma >= 10
 				}
 			}
 		}
@@ -135,6 +136,7 @@ orator_bribe_character = {
 				OR = {
 					has_trait = orator
 					has_trait = silver_tongued
+					charisma >= 10
 				}
 			}
 		}

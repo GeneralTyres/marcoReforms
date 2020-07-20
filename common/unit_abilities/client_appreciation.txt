@@ -1,0 +1,77 @@
+client_appreciation = {
+
+	duration = 0
+	enable = yes
+	toggle = no
+	soundeffect ="event:/SFX/Animations/Units/Generic/sfx_anim_unit_build_colony"
+
+	army_only = yes
+	
+	# Only rulers can do it
+	hidden = {
+		commander = { 
+			NOT = { 
+				is_ruler = yes
+			} 
+		}
+	}
+	
+	allow = {
+		# Unit has a commander
+		has_commander = yes
+		commander = {
+			is_ruler = yes
+		}
+		# Can pay for building
+		commander = { wealth >= 50 }
+
+		# Default
+		is_army = yes
+		in_combat = no
+		is_moving = no
+		in_siege = no
+		is_exiled = no
+		# Should be in a city with open building slots
+		unit_location = {
+			has_owner = yes
+			controller = {
+				is_subject_of = root.unit_owner
+			}
+			is_capital = yes
+		}
+		# unit_location = unit_location.owner.capital_scope
+		exists = unit_location.state
+		# Should have money
+		root.unit_owner = {
+			treasury > 50
+		}
+	}
+	
+	
+	start_effect = {
+		hidden_effect = {
+			unit_location = {
+				owner = {
+					save_scope_as = client_owner
+				}
+			}
+			unit_owner = {
+				trigger_event = {
+					id = ruler_unit.2 # Speak in senate
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = unit_location.state
+			}
+		}
+	
+	}
+	
+	ai_will_do = {
+	
+	}
+	
+	idle_entity_state = recruiting
+}

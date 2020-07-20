@@ -114,7 +114,7 @@ deity_paryushana = { # CULTURE
 	}
 	icon = deity_eloquence
 	passive_modifier = { monthly_political_influence_modifier = deity_monthly_political_influence_modifier_svalue }
-	omen = { global_citizen_output = omen_global_citizen_output_svalue } #Bonus from Omen
+	omen = { global_citizen_happyness = omen_global_citizen_output_svalue } #Bonus from Omen
 	on_activate = {
 		culture_apotheosis_characters_effect = yes
 	}

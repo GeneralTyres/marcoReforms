@@ -287,7 +287,6 @@ republican_land_reforms = {
 		}
 	}
 	republican_land_reform_1 = {
-		agressive_expansion_impact = -0.10
 		
 	}
 	republican_land_reform_2 = {
@@ -295,9 +294,11 @@ republican_land_reforms = {
 		allow = {
 			civic_tech >= 12
 		}
-	
+		
 		global_migration_speed = 1.5
-		global_pop_promotion_speed = 6
+		global_slaves_desired_pop_ratio = -0.05
+		global_slaves_happyness = 0.15
+		global_pop_promotion_speed = 4
 	}
 	republican_land_reform_3 = {
 	
@@ -305,8 +306,10 @@ republican_land_reforms = {
 			civic_tech >= 12
 		}
 	
-		global_goods_from_slaves = -2
-		civic_party_influence = 0.1
+		global_slaves_desired_pop_ratio = 0.05
+		global_citizen_output = 0.05
+		enslavement_efficiency = 0.05
+		global_slaves_happyness = -0.05
 	}
 	republican_land_reform_4 = {
 		
@@ -314,7 +317,9 @@ republican_land_reforms = {
 			civic_tech >= 12
 		}
 		
-		global_slaves_output = 0.25
-		religious_party_influence = 0.1
+		global_slaves_desired_pop_ratio = 0.1
+		global_citizen_output = 0.1
+		enslavement_efficiency = 0.1
+		global_slaves_happyness = -0.1
 	}
 }

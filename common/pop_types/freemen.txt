@@ -14,7 +14,7 @@
 	
 	conquest_demote_chance = 50
 	
-	base_happyness = 0.25
+	base_happyness = 0.35
 	
 	color = hsv { 0.15  1  0.7 }
 	

@@ -12,8 +12,9 @@ state_modification_in_progress = {
 }
 
 state_improvement_military = { 
-	local_output_modifier = 0.04
+	# local_output_modifier = 0.04
 	local_monthly_state_loyalty = 0.01
+	local_happiness_for_wrong_culture_modifier = -0.05
 }
 
 state_improvement_military_SPA = { 
@@ -23,15 +24,21 @@ state_improvement_military_SPA = {
 }
 
 state_improvement_civic = {
+	local_output_modifier = 0.04
 	local_building_slot = 1
+	local_goods_from_slaves = -0.5
 }
 
 state_improvement_oratory = {
-	local_state_trade_routes = 1
+	local_citizen_desired_pop_ratio = 0.01
+	local_pop_promotion_speed_modifier = 0.1
+	local_pop_assimilation_speed_modifier = 0.1
+	# local_state_trade_routes = 1
 }
 
 state_improvement_religious = {
 	local_happiness_for_same_religion_modifier = 0.03
+	local_pop_conversion_speed_modifier = 0.1
 } 
 
 state_improvement_religious_SPA = {

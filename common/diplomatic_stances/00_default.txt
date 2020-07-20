@@ -44,7 +44,7 @@ trading_stance = {
 warmongering_stance = {
 	modifier = {
 		fabricate_claim_speed = 1
-		war_score_cost = -0.1
+		war_score_cost = -0.2
 	}
 	ai_will_do = {
 		modifier = {

@@ -44,7 +44,7 @@ deity_mercury = {
 		}
 	}
 	icon = deity_wealth
-	passive_modifier = { global_citizen_output = deity_global_citizen_output_svalue }
+	passive_modifier = { global_citizen_happyness = deity_global_citizen_output_svalue }
 	omen = { global_commerce_modifier = omen_global_commerce_modifier_svalue } #Bonus from Omen
 	religion = roman_pantheon
 	deity_category = economy #This Deity uses an Economy Slot
@@ -218,7 +218,7 @@ deity_bacchus = {
 		}
 	}
 	icon = deity_love
-	passive_modifier = { global_tribesmen_output = global_tribesmen_output_svalue }
+	passive_modifier = { global_tribesmen_happyness = global_tribesmen_output_svalue }
 	omen = { global_citizen_happyness = omen_global_citizen_happiness_svalue } #Bonus from Omen
 	religion = roman_pantheon
 	deity_category = fertility #This Deity uses a Fertility Slot
@@ -371,7 +371,7 @@ deity_venus = {
 	}
 	icon = deity_love
 	passive_modifier = { global_population_capacity_modifier = deity_global_population_capacity_modifier_svalue }
-	omen = { global_citizen_output = omen_global_citizen_output_svalue } #Bonus from Omen
+	omen = { global_citizen_happyness = omen_global_citizen_output_svalue } #Bonus from Omen
 	religion = roman_pantheon
 	deity_category = fertility #This Deity uses a Fertility Slot
 	
@@ -400,7 +400,7 @@ deity_faunus = {
 	}
 	icon = deity_love
 	passive_modifier = { global_supply_limit_modifier = deity_global_supply_limit_modifier_svalue }
-	omen = { global_freemen_output = omen_global_freemen_output_svalue } #Bonus from Omen
+	omen = { global_freemen_happyness = omen_global_freemen_output_svalue } #Bonus from Omen
 	religion = roman_pantheon
 	deity_category = fertility #This Deity uses a Fertility Slot
 	

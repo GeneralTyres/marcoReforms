@@ -1698,7 +1698,7 @@ on_ownership_change = { #province scope
 
 on_province_occupied = { #province scope, it will fire AS WELL as on_siege_won
 	effect = {
-		add_civilization_value = -10
+		add_civilization_value = -5
 		if = {
 			limit = {
 				this = p:3256

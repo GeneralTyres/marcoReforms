@@ -12,6 +12,13 @@
 			NOT = { employer = { tag = REB } }
 			NOT = { employer = { tag = BAR } }
 			is_mercenary = no
+			NOT = {
+				employer = {
+					is_subject = yes
+					overlord = scope:actor
+					is_subject_type = client_state
+				}
+			}
 		}
 	}
 	

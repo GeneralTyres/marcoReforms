@@ -40,7 +40,7 @@ deity_nehalennia = { # ECONOMY
 	}
 	icon = deity_wealth
 	passive_modifier = { global_commerce_modifier = deity_global_commerce_modifier_svalue }
-	omen = { global_slaves_output = omen_global_slaves_output_svalue } #Bonus from Omen
+	omen = { global_slaves_happyness = omen_global_slaves_output_svalue } #Bonus from Omen
 	on_activate = {
 		economy_income_effect = yes
 	}
@@ -144,7 +144,7 @@ deity_tamfana = { # ECONOMY
 	}
 	icon = deity_wealth
 	passive_modifier = { global_food_capacity = deity_global_food_capacity_svalue }
-	omen = { global_tribesmen_output = omen_global_tribesmen_output_svalue } #Bonus from Omen
+	omen = { global_tribesmen_happyness = omen_global_tribesmen_output_svalue } #Bonus from Omen
 	on_activate = {
 		economy_apotheosis_capital_citizens_effect = yes
 	}

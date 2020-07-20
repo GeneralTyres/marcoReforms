@@ -29,15 +29,15 @@ subtract_gold_vast = -1500
 
 family_inheritance_svalue = {
 	value = root.wealth
-	multiply = 0.5
+	# multiply = 0.5
 }
 
 family_individual_inheritance_svalue = {
 	value = root.wealth
-	subtract = {
-		value = root.wealth
-		divide = 2
-	}
+	# subtract = {
+	# 	value = root.wealth
+	# 	divide = 2
+	# }
 }
 
 has_monthly_income_6_svalue = {

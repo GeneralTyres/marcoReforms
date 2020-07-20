@@ -196,7 +196,7 @@ deity_ga = {
 	}
 	icon = deity_love
 	passive_modifier = { global_population_growth = deity_global_population_growth_svalue }
-	omen = { global_citizen_output = omen_global_citizen_output_svalue } #Bonus from Omen
+	omen = { global_citizen_happyness = omen_global_citizen_output_svalue } #Bonus from Omen
 	religion = caucasian_religion
 	deity_category = fertility #This Deity uses a Fertility Slot
 	deification_trigger = {
@@ -221,7 +221,7 @@ deity_adgilis_deda = {
 		}
 	}
 	icon = deity_love
-	passive_modifier = { global_freemen_output = deity_global_freemen_output_svalue }
+	passive_modifier = { global_freemen_happyness = deity_global_freemen_output_svalue }
 	omen = { global_monthly_food_modifier = omen_global_monthly_food_modifier } #Bonus from Omen
 	religion = caucasian_religion
 	deity_category = fertility #This Deity uses a Fertility Slot

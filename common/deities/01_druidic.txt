@@ -40,7 +40,7 @@ deity_lugus = {
 	}
 	icon = deity_wealth
 	passive_modifier = { global_commerce_modifier = deity_global_commerce_modifier_svalue }
-	omen = { global_citizen_output = omen_global_citizen_output_svalue } #Bonus from Omen
+	omen = { global_citizen_happyness = omen_global_citizen_output_svalue } #Bonus from Omen
 	religion = druidism
 	deity_category = economy #This Deity uses an Economy Slot
 	deification_trigger = {
@@ -196,7 +196,7 @@ deity_cernunnos = {
 	}
 	icon = deity_wealth
 	passive_modifier = { religious_tech_investment = deity_religious_tech_investment_svalue }
-	omen = { global_slaves_output = omen_global_slaves_output_svalue } #Bonus from Omen
+	omen = { global_slaves_happyness = omen_global_slaves_output_svalue } #Bonus from Omen
 	religion = druidism
 	deity_category = economy #This Deity uses an Economy Slot
 	deification_trigger = {
@@ -770,7 +770,7 @@ deity_lenus = {
 		}
 	}
 	icon = deity_war
-	passive_modifier = { global_freemen_output = deity_global_freemen_output_svalue }
+	passive_modifier = { global_freemen_happyness = deity_global_freemen_output_svalue }
 	omen = { monthly_tyranny = omen_monthly_tyranny_svalue } #Bonus from Omen
 	religion = druidism
 	deity_category = war #This Deity uses a War Slot

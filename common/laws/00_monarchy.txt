@@ -151,9 +151,10 @@ monarchy_economic_law = {
 			civic_tech >= 3
 		}
 		
-		global_population_growth = 0.1
-		general_loyalty = -10
-		governor_loyalty = 10
+		global_slaves_desired_pop_ratio = 0.05
+		global_citizen_output = 0.05
+		enslavement_efficiency = 0.05
+		global_slaves_happyness = -0.05
 	}
 	
 	heritage_tax_exemption = {
@@ -162,9 +163,10 @@ monarchy_economic_law = {
 			civic_tech >= 3
 		}
 		
-		army_maintenance_cost = -0.15
-		governor_loyalty = -10
-		general_loyalty = 10
+		global_slaves_desired_pop_ratio = 0.1
+		global_citizen_output = 0.1
+		enslavement_efficiency = 0.1
+		global_slaves_happyness = -0.1
 	}
 	
 }

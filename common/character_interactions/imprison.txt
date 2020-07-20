@@ -29,6 +29,7 @@
 					}
 				}
 			}
+			employer = scope:actor
 			is_alive = yes
 			is_mercenary = no
 			prisoner = no

@@ -90,6 +90,7 @@
 				}
 			}
 			horse_archers_morale = 0.1
+			siege_ability = 0.1
 		}
 		persian_scythian_path_4 = {
 			ai_will_do = {
@@ -111,6 +112,7 @@
 				}
 			}
 			enable_tactic = cavalry_skirmish
+			siege_engineers = 3
 		} 
 		persian_scythian_path_5 = {
 			ai_will_do = {
@@ -272,6 +274,7 @@
 				}
 			}
 			enable_ability = levies #note: abilities can no longer be enabled here. They are enabled in the allow section of the ability
+			siege_engineers = 3
 		}
 		persian_achaemenid_path_5 = {
 			ai_will_do = {
@@ -345,10 +348,11 @@
 				}
 			}
 			heavy_infantry_cost = -0.15
+			siege_ability = 0.15
 		}
 	
 		bonus = {
-			siege_ability = 0.1
+			# siege_ability = 0.1
 		}
 	}
 	
@@ -473,6 +477,7 @@
 				}
 			}
 			warelephant_defensive = 0.1
+			siege_ability = 0.15
 		}
 		persian_bactrian_path_6 = {
 			ai_will_do = {
@@ -497,6 +502,7 @@
 				}
 			}
 			horse_archers_defensive = 0.1
+			siege_engineers = 3
 		}
 		persian_bactrian_path_7 = {
 			ai_will_do = {

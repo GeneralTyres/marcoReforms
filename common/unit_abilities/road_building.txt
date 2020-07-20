@@ -31,8 +31,17 @@
 		is_moving = no
 		is_exiled = no
 
-		scope:province = { #not unit_location since AI needs to be able to reason about this 
-			owner =  root.unit_owner
+		scope:province = { #not unit_location since AI needs to be able to reason about this
+			OR = {
+				owner =  root.unit_owner
+				AND = {
+					owner = {
+						is_subject = yes
+						overlord = root.unit_owner
+						is_subject_type = client_state
+					}
+				}
+			}
 		}
 		trigger_if = {
 			limit = {
@@ -63,7 +72,8 @@
 				NOT = { unit_location = root.var:road_location }
 				NOT = { unit_location = { has_road_towards = root.var:road_location } }
 				unit_location = { is_neighbor = root.var:road_location }
-				unit_owner = { can_pay_price = build_roads }
+				# unit_owner = { can_pay_price = build_roads }
+				root.unit_owner = { can_pay_price = build_roads }
 				unit_location = {
 					OR = {
 						AND = {
@@ -75,6 +85,12 @@
 							has_owner = no
 							NOT = {
 								is_sea = yes
+							}
+						}
+						# Check if subject
+						AND = {
+							owner = {
+								is_subject_of = root.unit_owner
 							}
 						}
 					}
@@ -107,6 +123,12 @@
 								is_sea = yes
 							}
 						}
+						# Check if subject
+						AND = {
+							owner = {
+								is_subject_of = root.unit_owner
+							}
+						}
 					}
 				}
 			}
@@ -128,19 +150,38 @@
 	finished_when = {
 		OR = {
 			has_variable = road_finished
-			unit_location = {
+			# unit_location = {
+			# 	OR = {
+			# 		is_sea = yes
+			# 		AND = {
+			# 			has_owner = yes
+			# 			NOT = {
+			# 				controller = root.unit_owner
+			# 			}
+			# 		}
+			# 		AND = {
+			# 			has_owner = yes
+			# 			NOT = {
+			# 				owner = root.unit_owner
+			# 			}
+			# 		}
+			# 	}
+			# }
+			# Using unit recovery
+			unit_location = { 	
 				OR = {
+					# Plus sea
 					is_sea = yes
-					AND = {
-						has_owner = yes
-						NOT = {
-							controller = root.unit_owner
-						}
+					NOT = {
+						exists = owner
 					}
-					AND = {
-						has_owner = yes
-						NOT = {
-							owner = root.unit_owner
+					NOR = {
+						root.unit_owner = controller
+						controller = {
+							alliance_with = root.unit_owner
+						}
+						controller = {
+							is_subject_of = root.unit_owner
 						}
 					}
 				}

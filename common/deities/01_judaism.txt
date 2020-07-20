@@ -148,7 +148,7 @@ deity_david = {
 		religion = judaism
 	}
 	icon = deity_wealth
-	passive_modifier = { global_citizen_output = deity_global_citizen_output_svalue }
+	passive_modifier = { global_citizen_happyness = deity_global_citizen_output_svalue }
 	omen = { global_tax_modifier = omen_global_tax_modifier_svalue } #Bonus from Omen
 	religion = judaism
 	deity_category = economy #This Deity uses an Economy Slot

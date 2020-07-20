@@ -71,7 +71,7 @@ deity_kothar = {
 	}
 	icon = deity_eloquence
 	passive_modifier = { research_points_modifier = deity_research_points_modifier_svalue }
-	omen = { global_citizen_output = omen_global_citizen_output_svalue } #Bonus from Omen
+	omen = { global_citizen_happyness = omen_global_citizen_output_svalue } #Bonus from Omen
 	religion = carthaginian_pantheon
 	deity_category = culture #This Deity uses a Culture Slot
 	deification_trigger = {

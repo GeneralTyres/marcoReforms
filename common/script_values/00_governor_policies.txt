@@ -61,6 +61,11 @@ num_of_citizen_plus = {
 	add = 1
 }
 
+num_of_citizen_traders = {
+	value = num_of_citizen
+	multiply = 0.1
+}
+
 state_civ_calc_svalue = {
 	value = 1
 	divide = {

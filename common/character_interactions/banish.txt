@@ -10,6 +10,7 @@
 		hidden:scope:target = {
 			NOT = { employer = { tag = REB } }
 			NOT = { employer = { tag = BAR } }
+			prisoner = yes
 			is_mercenary = no
 			prisoner_valid_for_country_events_trigger = yes
 			NOT = {

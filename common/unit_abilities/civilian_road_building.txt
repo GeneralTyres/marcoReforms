@@ -179,7 +179,7 @@
 				{
 					war = no
 				}
-				unit_threat <= 0.0
+				unit_threat < 0.05
 				unit_location = {
 					ai_wants_road = root.unit_owner
 				}

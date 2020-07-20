@@ -96,7 +96,7 @@ deity_wealth_earth = { # ECONOMY
 	}
 	icon = deity_wealth
 	passive_modifier = { global_tax_modifier = deity_global_tax_modifier_svalue }
-	omen = { global_slaves_output = omen_global_slaves_output_svalue } #Bonus from Omen
+	omen = { global_slaves_happyness = omen_global_slaves_output_svalue } #Bonus from Omen
 	on_activate = {
 		economy_apotheosis_capital_citizens_effect = yes
 	}

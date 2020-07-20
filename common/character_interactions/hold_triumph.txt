@@ -9,6 +9,7 @@
 		hidden:scope:target = {
 			is_alive = yes
 			prisoner = no
+			employer = scope:actor
 			NOT = { employer = { tag = REB } }
 			NOT = { employer = { tag = BAR } }
 			is_mercenary = no
@@ -44,7 +45,7 @@
 			set_variable = {
 				name = triumph_recently_held
 				value = 1
-				months = 60
+				months = 24
 			}
 			
 		}

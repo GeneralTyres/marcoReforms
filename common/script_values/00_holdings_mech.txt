@@ -7,7 +7,7 @@
 
 character_holding_price_svalue_ci = {
 	value = character_holding_price_svalue
-	multiply = 4
+	multiply = 1
 }
 
 holdings_prominence_chance_svalue = {

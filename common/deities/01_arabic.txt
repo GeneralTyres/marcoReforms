@@ -147,7 +147,7 @@ deity_manat = {
 	}
 	icon = deity_wealth
 	passive_modifier = { global_monthly_state_loyalty = deity_global_monthly_state_loyalty_svalue }
-	omen = { global_citizen_output = omen_global_citizen_output_svalue } #Bonus from Omen
+	omen = { global_citizen_happyness = omen_global_citizen_output_svalue } #Bonus from Omen
 	religion = arabian_pantheon
 	deity_category = economy #This Deity uses an Economy Slot
 	deification_trigger = {

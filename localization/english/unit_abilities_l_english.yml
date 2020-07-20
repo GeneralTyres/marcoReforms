@@ -113,3 +113,5 @@
  overlooked_sacking:0 "Benevolent view of Desecration"
  sacked_holy_site:0 "Sacked Holy Site"
  sacked_our_holy_site:0 "Sacked Our Holy Site"
+ client_appreciation:0 "Client Appreciation"
+ client_appreciationdesc:0 "Speak in the senate of your client state to ensure that they know we are allies"

@@ -19,8 +19,8 @@ fire_events.1 = {
 				}
 			}
 			add_fort_fire_effect = yes
+			add_civilization_value = -5
 		}
-		add_civilization_value = -5
 	}
 	
 }

@@ -3,6 +3,7 @@
 	skill = charisma
 	
 	skill_modifier = {
+		improve_relation_impact = 0.75
 		agressive_expansion_monthly_change = -0.01
 	}
 	personal_modifier = {

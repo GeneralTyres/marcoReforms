@@ -5,6 +5,7 @@
 
 	skill_modifier = {
 		senate_influence = 0.1
+		enact_law_cost_modifier = -0.025
 	}
 	personal_modifier = {
 		monthly_wage_for_character = 0.02
@@ -22,6 +23,7 @@ office_praetor = {
 	skill = charisma
 	
 	skill_modifier = {
+		improve_relation_impact = 0.05
 		agressive_expansion_monthly_change = -0.015
 	}
 	
@@ -45,7 +47,9 @@ office_tribune_of_the_soldiers = {
 
 
 	skill_modifier = {
+		global_start_experience = 0.5
 		discipline = 0.005
+		experience_decay = -0.01
 	}
 	personal_modifier = {
 		prominence = 10
@@ -65,7 +69,10 @@ office_tribune_of_the_treasury = {
 
 
 	skill_modifier = {
-		global_tax_modifier = 0.015
+		land_morale_recovery = -0.01
+		army_weight_modifier = -0.01
+		naval_damage_done = 0.01
+		# global_tax_modifier = 0.015
 	}
 	personal_modifier = {
 		monthly_character_popularity = 0.01
@@ -117,13 +124,16 @@ office_pontifex = {
 	
 }
 
+# Finance minister
 office_plebeian_aedile = {
 	type = republic
 	skill = finesse
 
 
 	skill_modifier = {
-		global_freemen_happyness = 0.005
+		# global_freemen_happyness = 0.005
+		global_tax_modifier = 0.01
+		global_commerce_modifier = 0.01
 	}
 	personal_modifier = {
 		monthly_character_popularity = 0.01
@@ -137,13 +147,18 @@ office_plebeian_aedile = {
 	}
 }
 
+# Civil engineer
 office_republic_physician = {
 	
 	type = republic
 	skill = finesse
 	
 	skill_modifier = {
-		health = 0.005
+		
+		build_cost = -0.01
+		build_time = -0.2
+		build_expensive_roads_cost_modifier = -0.25
+		# health = 0.005
 	}
 	
 	personal_modifier = {

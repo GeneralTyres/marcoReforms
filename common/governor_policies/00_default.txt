@@ -5,6 +5,8 @@ acquisition_of_wealth = {
 		monthly_local_governor_wage = 0.2
 		local_tax_modifier = 0.1
 		state_commerce_modifier = 0.1
+		local_citizen_happyness = -0.1
+		local_freemen_happyness = -0.1
 	}
 
 	ai_will_do = {
@@ -28,80 +30,80 @@ acquisition_of_wealth = {
 	on_action = acquisition_of_wealth_pulse
 }
 
-religious_conversion = {
-	province = {
-		local_pop_conversion_speed = 3
-	}
-	ai_will_do = {
+# religious_conversion = {
+# 	province = {
+# 		local_pop_conversion_speed = 3
+# 	}
+# 	ai_will_do = {
 		
-		modifier = {
-			add = 
-			{
-				value = governor_or_ruler.zeal
-				divide = 4
-			}
-		}
-		modifier = {
-			add = 3
-			governor_or_ruler = { has_trait = pious }
-		}
-		modifier = {
-			add = 4
-			governor_or_ruler = { has_trait = zealous }
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				governor_or_ruler = { has_religion = employer.religion }
-			}
-		}
-		modifier = {
-			factor = 0
+# 		modifier = {
+# 			add = 
+# 			{
+# 				value = governor_or_ruler.zeal
+# 				divide = 4
+# 			}
+# 		}
+# 		modifier = {
+# 			add = 3
+# 			governor_or_ruler = { has_trait = pious }
+# 		}
+# 		modifier = {
+# 			add = 4
+# 			governor_or_ruler = { has_trait = zealous }
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			NOT = {
+# 				governor_or_ruler = { has_religion = employer.religion }
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
 		
-			any_state_province = {
-				count = all
-				dominant_province_religion = root.governor_or_ruler.religion
-			}
-		}
-	}
+# 			any_state_province = {
+# 				count = all
+# 				dominant_province_religion = root.governor_or_ruler.religion
+# 			}
+# 		}
+# 	}
 
-	#deprecated on_action = religious_conversion_pulse
-}
+# 	#deprecated on_action = religious_conversion_pulse
+# }
 
-cultural_assimilation = {
-	province = {
-		local_pop_assimilation_speed = 5
-	}
-	ai_will_do = {
-		modifier = {
-			add = governor_or_ruler.finesse
-		}
-		modifier = {
-			add = 10
-			state_level_loyalty >= 60
-			any_state_province = {
-				NOT = {
-					dominant_province_culture = root.governor_or_ruler.employer.culture
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			NOT = {
-				governor_or_ruler = { has_culture = employer.culture }
-			}
-		}
-		modifier = {
-			factor = 0
-			any_state_province = {
-				count = all
-				dominant_province_culture = root.governor_or_ruler.employer.culture
-			}
-		}
-	}
+# cultural_assimilation = {
+# 	province = {
+# 		local_pop_assimilation_speed = 5
+# 	}
+# 	ai_will_do = {
+# 		modifier = {
+# 			add = governor_or_ruler.finesse
+# 		}
+# 		modifier = {
+# 			add = 10
+# 			state_level_loyalty >= 60
+# 			any_state_province = {
+# 				NOT = {
+# 					dominant_province_culture = root.governor_or_ruler.employer.culture
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			NOT = {
+# 				governor_or_ruler = { has_culture = employer.culture }
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			any_state_province = {
+# 				count = all
+# 				dominant_province_culture = root.governor_or_ruler.employer.culture
+# 			}
+# 		}
+# 	}
 
-	#deprecated on_action = culture_conversion_pulse
-}
+# 	#deprecated on_action = culture_conversion_pulse
+# }
 
 bleed_them_dry = {
 	province = {
@@ -158,7 +160,8 @@ borderlands = {
 encourage_trade = {
 	
 	province = {
-		state_commerce_modifier = 0.25
+		# state_commerce_modifier = 0.25
+		local_state_trade_routes = 1
 		local_monthly_food_modifier = 0.1
 	}
 
@@ -274,7 +277,7 @@ local_autonomy = {
 
 civilization_effort = {
 	province = {
-		local_monthly_civilization = 0.05
+		local_monthly_civilization = 0.1
 	}
 
 	ai_will_do = {
@@ -294,6 +297,17 @@ civilization_effort = {
 						has_province_modifier = minor_barbarian_spawn_place
 						has_province_modifier = generic_barbarian_spawn_place
 						has_province_modifier = major_barbarian_spawn_place
+						AND = {
+							civilization_value < 30
+							NOT = {
+								AND = {
+									governor_or_ruler.employer = {
+										is_tribal = yes
+										centralization <= 40
+									}
+								}
+							}
+						}
 					}
 				}
 			}

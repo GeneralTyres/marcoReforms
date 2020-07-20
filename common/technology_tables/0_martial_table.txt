@@ -3,9 +3,10 @@
 
 	skill = martial
 
-	land_morale = 0.1
-	naval_morale = 0.1
+	#land_morale = 0.1
+	# naval_morale = 0.1
+	monthly_military_experience = 0.025
 	
-	army_maintenance_cost = 0.03
-	navy_maintenance_cost = 0.03
+	# army_maintenance_cost = 0.03
+	# navy_maintenance_cost = 0.03
 }

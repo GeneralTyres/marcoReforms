@@ -292,3 +292,13 @@ least_prestige_svalue = {
 	value = prestige
 	multiply = -1
 }
+
+# Used when recruiting a character from a client state
+recruit_client_gold_svalue = {
+	value = 0
+	add = scope:target.martial
+	add = scope:target.charisma
+	add = scope:target.finesse
+	add = scope:target.zeal
+	multiply = 5
+}

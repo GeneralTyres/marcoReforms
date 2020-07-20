@@ -13,10 +13,11 @@
 		is_army = yes
 		in_combat = no
 		OR = {
-			is_moving = no
+			# is_moving = no
+			unit_owner = { is_ai = no }
 			unit_owner = { is_ai = yes } #AI doesn't know how to stop for abilities.
 		}
-		is_exiled = no
+		# is_exiled = no
 		trigger_if = {
 			limit = {
 				exists = commander

@@ -10,6 +10,7 @@
 			is_alive = yes
 			is_mercenary = no
 			is_head_of_family = yes
+			employer = scope:actor
 			is_ruler = no
 			NOT = { employer = { tag = REB } }
 			NOT = { employer = { tag = BAR } }

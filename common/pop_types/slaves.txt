@@ -10,7 +10,7 @@
 	
 	is_slaves = yes
 	can_promote_to = freemen
-	demotes_to = slaves	#doesnt demote really
+	demotes_to = tribesmen	#doesnt demote really
 	
 	conquest_demote_chance = 0
 	
@@ -25,7 +25,7 @@
 	convert = 0.6
 	assimilate = 0.8
 	promote = 4
-	demote = 0
+	demote = 2
 	migrant = 0.05
 
 	

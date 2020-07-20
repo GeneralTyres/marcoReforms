@@ -20,7 +20,7 @@
 		in_combat = no
 		is_moving = no
 		in_siege = no
-		is_exiled = no
+		# is_exiled = no
 		hidden:unit_location = {
 			has_owner = yes
 			civilization_value > 20

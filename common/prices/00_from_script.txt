@@ -3,8 +3,8 @@
 }
 
 hold_triumph = {
-	scaled_gold = 6
-	stability = 5
+	scaled_gold = 3
+	# stability = 5
 }
 
 hold_games_price = {
@@ -16,7 +16,7 @@ smear_character = {
 }
 
 assassinate_attempt = {
-	aggressive_expansion = 20
+	aggressive_expansion = 5
 }
 
 inspire_disloyalty = {
@@ -52,7 +52,7 @@ slaves_move = {
 }
 
 desecrate = {
-	aggressive_expansion = 2
+	aggressive_expansion = 10
 }
 
 build_border_fort = {
@@ -68,11 +68,11 @@ raise_levies = {
 }
 
 recruit_character = {
-	aggressive_expansion = 2
+	# aggressive_expansion = 2
 }
 
 recruit_general = {
-	aggressive_expansion = 10
+	# aggressive_expansion = 10
 }
 
 secude_governor = {

@@ -3,13 +3,14 @@
 
 
 	province = { #Applied to all territories in province
-		local_monthly_food_modifier = 0.10
+		# local_monthly_food_modifier = 0.10
+		local_monthly_food = 0.25
 	}
 	state_capital = { #Stacks in Province capital
-		local_monthly_food = 5
+		local_monthly_food = 4
 	}
 	country = { #Applied to country
-		global_population_growth = 0.01
+		global_monthly_food_modifier = 0.05
 		# global_manpower_modifier = 0.1
 	}
 	export = { #Applied to country
@@ -29,7 +30,9 @@ salt = {
 		local_food_capacity = 400
 	}
 	country = {
-		army_maintenance_cost = -0.05
+		global_food_capacity = 0.05
+		health = 0.02
+		# army_maintenance_cost = -0.05
 	}
 	
 	export = {
@@ -45,12 +48,18 @@ iron = {
 	
 	province = {
 		#gives heavy inf
+		local_freemen_output = 0.05
 	}
 	state_capital = {
-		local_manpower_modifier = 0.05
+		local_freemen_output = 0.05
+		# local_manpower_modifier = 0.05
 	}
 	country = {
-		heavy_infantry_discipline = 0.1
+		# heavy_infantry_discipline = 0.1
+		heavy_infantry_cost = -0.2
+		heavy_cavalry_cost = -0.1
+		heavy_infantry_maintenance_cost = -0.2
+		heavy_cavalry_maintenance_cost = -0.1
 	}
 
 	export = {
@@ -68,12 +77,20 @@ horses = {
 
 	province = {
 		#gives cav
+		local_freemen_output = 0.05
+		local_slaves_output = 0.05
 	}
 	state_capital = {
-		local_population_capacity_modifier = 0.05
+		local_freemen_output = 0.05
+		local_slaves_output = 0.05
+		# local_population_capacity_modifier = 0.05
 	}
 	country = {
-		light_cavalry_discipline = 0.1
+		# light_cavalry_discipline = 0.1
+		light_cavalry_maintenance_cost = -0.2
+		light_cavalry_cost = -0.2
+		heavy_cavalry_maintenance_cost = -0.1
+		heavy_cavalry_cost = -0.1
 	}
 
 	export = {
@@ -117,10 +134,11 @@ wood = {
 		#gives ships
 	}
 	state_capital = {
-		local_tax_modifier = 0.03
+		local_ship_recruit_speed = 0.5
 	}
 	country = {
 		global_ship_recruit_speed = 0.50
+		navy_maintenance_cost = -0.2
 	}
 	export = {
 		# global_ship_recruit_speed = 0.20
@@ -171,10 +189,11 @@ stone = {
 fish = {
 	category = 1
 	province = {
-		local_monthly_food_modifier = 0.10
+		# local_monthly_food_modifier = 0.10
+		local_monthly_food = 0.125
 	}
 	state_capital = {
-		local_monthly_food = 3
+		local_monthly_food = 2
 	}
 	country = {
 		global_freemen_happyness = 0.05
@@ -190,10 +209,10 @@ fish = {
 spices = {
 	category = 2
 	province = {
-		local_citizen_output = 0.05
+		local_citizen_output = 0.1
 	}
 	state_capital = {
-		local_citizen_output = 0.025
+		local_citizen_output = 0.1
 	}
 	country = {
 		global_citizen_output = 0.05
@@ -211,12 +230,16 @@ elephants = {
 	allow_unit_type = warelephant
 	
 	province = {
+		local_slaves_output = 0.05
 	}
 	state_capital = {
-		local_manpower_modifier = 0.05
+		# local_manpower_modifier = 0.05
+		local_slaves_output = 0.05
 	}
 	country = {
-		warelephant_discipline = 0.1
+		# warelephant_discipline = 0.1
+		warelephant_maintenance_cost = -0.2
+		warelephant_cost = -0.2
 	}
 	export = {
 		# warelephant_discipline = 0.05
@@ -234,6 +257,7 @@ papyrus = {
 		local_research_points_modifier = 0.05
 	}
 	country = {
+		health = 0.02
 		civic_tech_investment = 0.05
 	}
 	export = {
@@ -247,13 +271,16 @@ papyrus = {
 cloth = {
 	category = 4
 	province = {
-		local_tax_modifier = 0.1
+		local_output_modifier = 0.05
+		# local_tax_modifier = 0.1
 	}
 	state_capital = {
-		local_tax_modifier = 0.05
+		local_output_modifier = 0.05
+		# local_tax_modifier = 0.05
 	}
 	country = {
-		oratory_tech_investment = 0.05
+		local_output_modifier = 0.025
+		# oratory_tech_investment = 0.05
 	}
 	export = {
 		# research_points_modifier = 0.05
@@ -266,13 +293,13 @@ cloth = {
 wild_game = {
 	category = 3
 	province = {
-		local_tribesmen_output = 0.1
+		local_tribesmen_output = 0.05
 	}
 	state_capital = {
 		local_tribesmen_output = 0.05
 	}
 	country = {
-		archers_discipline = 0.1
+		local_tribesmen_output = 0.025
 	}
 	export = {
 		# archers_discipline = 0.05
@@ -309,10 +336,14 @@ steppe_horses = {
 	province = {
 	}
 	state_capital = {
-		local_manpower_modifier = 0.05
+		local_slaves_output = 0.05
+		local_freemen_output = 0.05
+		# local_manpower_modifier = 0.05
 	}
 	country = {
-		horse_archers_discipline = 0.1
+		# horse_archers_discipline = 0.1
+		horse_archers_cost = -0.2
+		horse_archers_maintenance_cost = -0.2
 	}
 	export = {
 		# horse_archers_discipline = 0.05
@@ -325,10 +356,11 @@ cattle = {
 	category = 1
 
 	province = {
-		local_monthly_food_modifier = 0.10
+		# local_monthly_food_modifier = 0.10
+		local_monthly_food = 0.125
 	}
 	state_capital = {
-		local_monthly_food = 3
+		local_monthly_food = 2
 	}
 	country = {
 		global_pop_promotion_speed_modifier = 0.25
@@ -351,7 +383,8 @@ earthware = {
 		local_research_points_modifier = 0.01
 	}
 	country = {
-		global_freemen_output = 0.025
+		local_research_points_modifier = 0.05
+		# global_freemen_output = 0.025
 	}
 	export = {
 		# global_freemen_output = 0.01
@@ -454,13 +487,15 @@ base_metals = {
 
 
 	province = {
-		local_freemen_output = 0.05
+		local_freemen_output = 0.1
 	}
 	state_capital = {
-		local_freemen_output = 0.025
+		local_freemen_output = 0.1
 	}
 	country = {
-		light_infantry_offensive = 0.1
+		# light_infantry_offensive = 0.1
+		light_infantry_cost = -0.2
+		light_infantry_maintenance_cost = -0.2
 	} 
 	
 	export = {
@@ -484,6 +519,7 @@ woad = {
 		local_tribesmen_happyness = 0.02
 	}
 	country = {
+		health = 0.02
 		global_tribesmen_happyness = 0.1
 	}
 	export = {
@@ -528,7 +564,9 @@ honey = {
 		local_freemen_output = 0.025
 	}
 	country = {
-		diplomatic_reputation = 2
+		health = 0.02
+		# global_freemen_output = 0.025
+		# diplomatic_reputation = 2
 	}
 	export = {
 		# diplomatic_reputation = 1
@@ -543,13 +581,16 @@ incense = {
 	category = 4
 
 	province = {
-		local_commerce_value_modifier = 0.1
+		happiness_for_same_religion_modifier = 0.05
+		# local_commerce_value_modifier = 0.1
 	}
 	state_capital = {
-		local_commerce_value_modifier = 0.02
+		happiness_for_same_religion_modifier = 0.05
+		# local_commerce_value_modifier = 0.02
 	}
 	country = {
-		happiness_for_same_religion_modifier = 0.025
+		health = 0.02
+		happiness_for_same_religion_modifier = 0.05
 	}
 	export = {
 		# omen_power = 0.05
@@ -564,13 +605,14 @@ hemp = {
 	category = 3
 
 	province = {
-		local_slaves_output = 0.1
+		local_slaves_output = 0.15
 	}
 	state_capital = {
-		local_slaves_output = 0.02
+		local_slaves_output = 0.05
 	}
 	country = {
-		naval_damage_done = 0.1
+		global_slaves_output = 0.05
+		#naval_damage_done = 0.1
 	}
 	export = {
 		# naval_damage_taken = -0.1
@@ -585,10 +627,11 @@ vegetables = {
 	category = 1
 
 	province = {
-		local_monthly_food_modifier = 0.10
+		# local_monthly_food_modifier = 0.10
+		local_monthly_food = 0.125
 	}
 	state_capital = {
-		local_monthly_food = 3
+		local_monthly_food = 2
 	}
 	country = {
 		slaves_move_cost_modifier = -0.2
@@ -605,13 +648,16 @@ vegetables = {
 gems = {
 	category = 4
 	province = {
-		local_tax_modifier = 0.2
+		#local_tax_modifier = 0.2
+		local_citizen_happyness = 0.1
 	}
 	state_capital = {
-		local_tax_modifier = 0.1
+		# local_tax_modifier = 0.1
+		local_citizen_happyness = 0.1
 	}
 	country = {
 		country_civilization_value = 5
+		global_citizen_happyness = 0.05
 	}
 	export = {
 		# country_civilization_value = 2.5
@@ -626,12 +672,16 @@ camel = {
 	category = 0
 	
 	province = {
+		local_slaves_output = 0.05
 	}
 	state_capital = {
-		supply_limit_modifier = 0.025
+		# supply_limit_modifier = 0.025
+		local_slaves_output = 0.05
 	}
 	country = {
-		camels_discipline = 0.1
+		# camels_discipline = 0.1
+		camels_maintenance_cost = -0.2
+		camels_cost = -0.2
 	}
 	export = {
 		# camels_discipline = 0.05
@@ -645,12 +695,17 @@ glass = {
 	category = 4
 	province = {
 		local_country_civilization_value = 2
+		local_citizen_output = 0.1
 	}
 	state_capital = {
 		local_country_civilization_value = 1
+		local_citizen_output = 0.1
 	}
 	country = {
-		religious_tech_investment = 0.05
+		# religious_tech_investment = 0.05
+		health = 0.02
+		country_civilization_value = 5
+		global_citizen_happyness = 0.05
 	}
 	export = {
 		# research_points_modifier = 0.05
@@ -663,13 +718,16 @@ glass = {
 silk = {
 	category = 4
 	province = {
-		local_commerce_value_modifier = 0.15
+		# local_commerce_value_modifier = 0.15
+		local_citizen_happyness = 0.2
 	}
 	state_capital = {
-		local_commerce_value_modifier = 0.05
+		# local_commerce_value_modifier = 0.05
+		local_citizen_happyness = 0.2
 	}
 	country = {
-		integrate_speed = 0.1
+		global_citizen_output = 0.1
+		# integrate_speed = 0.1
 	}
 	export = {
 		# integrate_speed = 0.05
@@ -686,10 +744,11 @@ dates = {
 		local_freemen_happyness = 0.05
 	}
 	state_capital = {
-		local_freemen_happyness = 0.02
+		local_freemen_happyness = 0.05
 	}
 	country = {
-		global_commerce_modifier = 0.05
+		global_freemen_happyness = 0.025
+		# global_commerce_modifier = 0.05
 	}
 	export = {
 		# global_commerce_modifier = 0.025

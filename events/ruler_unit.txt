@@ -80,3 +80,107 @@ ruler_unit.1 = {
 
     }
 }
+
+# Ruler speaks in senate
+ruler_unit.2 = {
+  type = country_event # EVENT TYPE - Can be Country/Province/Character, decides ROOT Scope
+  title = ruler_unit.2.t # LOCALIZATION KEY - Title of Event
+  desc = ruler_unit.2.desc # LOCALIZATION KEY - Description of Event
+  picture = senate_debate # EVENT PICTURE
+  hidden = no # SPECIAL FIELD - Can hide the event from a player's view
+  goto_location = ROOT # SPECIAL FIELD - Will let the player jump to the province in question
+
+  # weight_multiplier = { # MODIFIER - Will modify the chances for the event to fire
+
+  # }
+
+  trigger = { # TRIGGER FIELD - Checks if the event will fire at all
+
+  }
+
+immediate = { # EFFECT FIELD - Fires after trigger check, but before everything else
+  # save_scope_as = plague_city_scope # EFFECT - Save Scope for later
+  }
+
+  option = { # EFFECT FIELD - FIRST OPTION - Player ruler does not donate any gold
+    name = ruler_unit.2.a
+
+    # Pay for construction
+    scope:client_owner.current_ruler = {
+      # add_gold = -300
+      # add_popularity = 10
+    }
+
+    scope:client_owner = {
+      add_opinion = {
+        modifier = athenian_mission_04_athenian_subject
+        target = scope:client_owner.overlord
+      }
+    }
+  }
+  option = { # EFFECT FIELD - SECOND OPTION - The player state donates
+    name = ruler_unit.2.b
+
+    # State donate
+    scope:client_owner.overlord = {
+      add_treasury = -50
+    }
+    scope:client_owner = {
+      add_country_modifier = {
+        name = country_improvement_frentanian_trade
+        duration = 3650 # 10 years
+      }
+      add_treasury = 50
+    }
+    scope:client_owner = {
+      add_opinion = {
+        modifier = athenian_mission_04_athenian_subject
+        target = scope:client_owner.overlord
+      }
+    }
+  }
+  option = { # EFFECT FIELD - THIRD OPTION - The player ruler also donates
+    name = ruler_unit.2.c
+    # Ruler donates
+    scope:client_owner.overlord.current_ruler = {
+      add_gold = -50
+    }
+    # State donate
+    scope:client_owner.overlord = {
+      add_treasury = -50
+    }
+    scope:client_owner = {
+      add_country_modifier = {
+        name = country_modifier_marsian_friendship
+        duration = 3650 # 10 years
+      }
+      add_treasury = 100
+    }
+    scope:client_owner = {
+      add_opinion = {
+        modifier = athenian_mission_04_athenian_subject
+        target = scope:client_owner.overlord
+      }
+    }
+  }
+  option = { # EFFECT FIELD - FOURTH OPTION - Promise manpower
+    name = ruler_unit.2.d
+    # Give manpower
+    trigger = { # TRIGGER FIELD - Checks if this specific option will be shown
+      scope:client_owner.overlord.manpower > 1
+    }
+    scope:client_owner = {
+      add_manpower = 5
+    }
+    scope:client_owner = {
+      add_opinion = {
+        modifier = athenian_mission_04_athenian_subject
+        target = scope:client_owner.overlord
+      }
+    }
+  }
+
+  after = { # EFFECT FIELD - Happens after the player has clicked an option
+
+  }
+}

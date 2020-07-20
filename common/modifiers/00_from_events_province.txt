@@ -1529,6 +1529,9 @@ family_estates_being_expanded_modifier = {
 
 family_estate_modifier = {
 	local_output_modifier = 0.03
+	local_slaves_desired_pop_ratio = 0.01
+	local_pop_demotion_speed_modifier = 0.05
+	local_freemen_happyness = -0.075
 }
 
 pythagoras_tomb_modifier = {

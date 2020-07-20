@@ -6,11 +6,17 @@ aristocratic_republic = { #military party
 	type = republic
 	
 	bonus = {
-		global_freemen_happyness = 0.10
-		character_loyalty = 5
+		# global_freemen_happyness = 0.10
+		# character_loyalty = 5
+		# global_freemen_desired_pop_ratio = 0.1
 	}
 	base = {
 		country_civilization_value = 35
+		monthly_wage_modifier = 0.2
+		monthly_local_governor_wage = 0.2
+
+		global_freemen_desired_pop_ratio = 0.1
+		global_citizen_happyness = 0.15
 	}
 	
 	minimum_electable_age = 35
@@ -30,11 +36,13 @@ theocratic_republic = { #religious party
 	type = republic
 	
 	bonus = {
-		omen_power = 0.15
-		happiness_for_same_religion_modifier = 0.1
+		# omen_power = 0.15
+		# happiness_for_same_religion_modifier = 0.1
 	}
 	base = {
 		country_civilization_value = 35
+		happiness_for_same_religion_modifier = 0.1
+		omen_power = 0.15
 	}
 	
 	minimum_electable_age = 35
@@ -51,11 +59,17 @@ oligarchic_republic = { #civic party
 	type = republic
 	
 	bonus = {	
-		global_citizen_happyness = 0.15
-		monthly_wage_modifier = -0.10
+		# global_citizen_happyness = 0.15
+		# monthly_wage_modifier = -0.10
+		# global_freemen_desired_pop_ratio = 0.15
 	}
 	base = {
 		country_civilization_value = 35
+		monthly_wage_modifier = 0.2
+		monthly_local_governor_wage = 0.2
+
+		global_freemen_desired_pop_ratio = 0.15
+		global_citizen_happyness = 0.2
 	}
 	
 	minimum_electable_age = 40
@@ -75,10 +89,18 @@ democratic_republic = { #populist/stepping stone party
 	type = republic
 	
 	bonus = {
-		global_freemen_happyness = 0.1
+		# global_freemen_happyness = 0.1
+		# global_freemen_desired_pop_ratio = 0.05
+		# global_citizen_desired_pop_ratio = 0.1
 	}
 	base = {
 		country_civilization_value = 30
+
+		global_citizen_desired_pop_ratio = 0.1
+		global_citizen_happyness = 0.05
+		global_freemen_happyness = 0.05
+		global_tribesmen_happyness = 0.05
+		global_slaves_happyness = 0.05
 	}
 	
 	minimum_electable_age = 25
@@ -97,15 +119,24 @@ plutocratic_republic = { #mercantile party
 	type = republic
 	
 	bonus = {
-		global_commerce_modifier = 0.1
-		global_capital_trade_routes = 1
+		# global_commerce_modifier = 0.1
+		# global_capital_trade_routes = 1
+		# global_freemen_desired_pop_ratio = 0.05
+		# global_citizen_desired_pop_ratio = 0.05
 	}
 	base = {
 		country_civilization_value = 35
+
+		monthly_wage_modifier = 0.1
+		monthly_local_governor_wage = 0.1
+		global_capital_trade_routes = 1
+		global_commerce_modifier = 0.1
+		global_freemen_desired_pop_ratio = 0.05
+		global_citizen_desired_pop_ratio = 0.05
 	}
 	
 	minimum_electable_age = 35
-
+	
 	election_delay = 10
 	ruler_term = 5
 	
@@ -147,11 +178,13 @@ dictatorship = {
 	
 	bonus = {
 		global_freemen_happyness = 0.10
-		global_citizen_output = 0.15
 	}
 	base = {
 		monthly_tyranny = 0.04
 		country_civilization_value = 35
+		monthly_wage_modifier = 0.2
+		monthly_local_governor_wage = 0.2
+		global_freemen_desired_pop_ratio = 0.05
 	}
 	
 	ruler_consort_benefits = yes
@@ -174,6 +207,8 @@ despotic_monarchy = { #stepping stone/starting type
 	}
 	base = {
 		country_civilization_value = 30
+		monthly_wage_modifier = 0.25
+		monthly_local_governor_wage = 0.25
 	}
 	
 	election_delay = 0
@@ -193,11 +228,15 @@ aristocratic_monarchy = {
 	
 	bonus = {
 		monthly_tyranny = -0.1
-		global_citizen_happyness = 0.1
-		global_freemen_city_desired_pop_ratio = 0.1
+		# global_citizen_happyness = 0.1
+		# global_freemen_city_desired_pop_ratio = 0.1
 	}
 	base = {
 		country_civilization_value = 35
+		monthly_wage_modifier = 0.25
+		monthly_local_governor_wage = 0.25
+		global_citizen_city_desired_pop_ratio = 0.04
+		global_citizen_happyness = 0.15
 	}
 	election_delay = 0
 	
@@ -214,12 +253,16 @@ stratocratic_monarchy = {
 	type = monarchy
 	
 	bonus = {
-		global_freemen_output = 0.10
-		character_loyalty = 5
+		# global_freemen_output = 0.10
+		# character_loyalty = 5
 	}
 	base = {
 		country_civilization_value = 35
-		global_freemen_city_desired_pop_ratio = 0.1
+		global_freemen_city_desired_pop_ratio = 0.05
+		character_loyalty = 5
+		monthly_wage_modifier = 0.25
+		monthly_local_governor_wage = 0.25
+		global_manpower_modifier = 0.25
 	}
 	
 	election_delay = 0
@@ -235,11 +278,15 @@ theocratic_monarchy = {
 	religious_ideas = 2
 	
 	bonus = {
-		omen_power = 0.15
-		happiness_for_same_religion_modifier = 0.1
+		# omen_power = 0.15
+		# happiness_for_same_religion_modifier = 0.1
 	}
 	base = {
 		country_civilization_value = 35
+		monthly_wage_modifier = 0.25
+		monthly_local_governor_wage = 0.25
+		omen_power = 0.15
+		happiness_for_same_religion_modifier = 0.1
 	}
 	
 	use_regnal_numbers = yes
@@ -254,11 +301,17 @@ plutocratic_monarchy = {
 	civic_ideas = 2
 	
 	bonus = {
-		global_commerce_modifier = 0.1
-		global_capital_trade_routes = 1
+		# global_commerce_modifier = 0.1
+		 #global_capital_trade_routes = 1
 	}
 	base = {
 		country_civilization_value = 35
+		monthly_wage_modifier = 0.25
+		monthly_local_governor_wage = 0.25
+		global_commerce_modifier = 0.1
+		global_capital_trade_routes = 1
+		global_citizen_city_desired_pop_ratio = 0.03
+		global_citizen_happyness = 0.15
 	}
 	
 	use_regnal_numbers = yes
@@ -277,11 +330,15 @@ imperium = {
 	type = monarchy
 	
 	bonus = {
-		global_freemen_output = 0.15
-		global_slaves_output = 0.15
+		# global_freemen_output = 0.15
+		# global_slaves_output = 0.15
 	}
 	base = {
 		country_civilization_value = 40
+		monthly_wage_modifier = 0.25
+		monthly_local_governor_wage = 0.25
+		global_freemen_output = 0.15
+		global_slaves_output = 0.15
 	}
 
 	use_regnal_numbers = yes
@@ -309,6 +366,8 @@ imperial_cult = {
 	}
 	base = {
 		country_civilization_value = 40
+		monthly_wage_modifier = 0.25
+		monthly_local_governor_wage = 0.25
 	}
 
 	use_regnal_numbers = yes
@@ -330,10 +389,11 @@ tribal_chiefdom = {
 	allows_migration = yes
 	
 	bonus = {
-		global_tribesmen_output = 0.15
+		
 	}
 	base = {
 		global_tribesmen_happyness = 0.1
+		global_tribesmen_output = 0.15
 	}
 
 	election_delay = 0
@@ -347,10 +407,11 @@ tribal_kingdom = {
 	type = tribal
 	
 	bonus = {
-		global_tribesmen_happyness = 0.15
+		# global_tribesmen_happyness = 0.15
 	}
 	base = {
 		country_civilization_value = 10
+		global_tribesmen_happyness = 0.15
 	}
 
 	election_delay = 0
@@ -367,11 +428,12 @@ tribal_federation = {
 
 	
 	bonus = {
-		global_tribesmen_output = 0.2
-		global_pop_promotion_speed_modifier = 0.25
+
 	}
 	base = {
 		country_civilization_value = 15
+		global_tribesmen_output = 0.2
+		global_pop_promotion_speed_modifier = 0.25
 	}
 
 	election_delay = 0

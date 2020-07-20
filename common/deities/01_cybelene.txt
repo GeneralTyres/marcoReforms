@@ -42,7 +42,7 @@ deity_dactyl = {
 	}
 	icon = deity_wealth
 	passive_modifier = { civic_tech_investment = deity_civic_tech_investment_svalue }
-	omen = { global_citizen_output = omen_global_citizen_output_svalue } #Bonus from Omen
+	omen = { global_citizen_happyness = omen_global_citizen_output_svalue } #Bonus from Omen
 	religion = anatolian_religion
 	deity_category = economy #This Deity uses an Economy Slot
 	deification_trigger = {

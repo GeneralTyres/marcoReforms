@@ -1,11 +1,12 @@
 ﻿citizen = {
 	outout_modifier = {
+		local_manpower = 0.001
 		research_points = 0.25
 		commerce_value = 0.01
 	}
 	
 	count_modifier = {
-		local_state_trade_routes = 0.015
+		local_state_trade_routes = 0.2
 		pop_food_consumption = -0.3
 	}
 	
@@ -13,9 +14,9 @@
 	
 	demotes_to = freemen
 	
-	conquest_demote_chance = 50
+	conquest_demote_chance = 90
 	
-	base_happyness = 0.2
+	base_happyness = 0.3
 	
 	score = yes
 	
